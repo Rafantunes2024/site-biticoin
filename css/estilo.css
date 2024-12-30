@@ -1,0 +1,311 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fontes e cores */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #000000;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: column; /* Adiciona para centralizar itens na versão mobile */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+header .logo h1 {
+    font-size: 36px; /* Aumenta o tamanho do título */
+    margin-bottom: 10px; /* Ajusta o espaço abaixo do título */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Aumenta o espaçamento entre os itens da navegação */
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f8b500;
+}
+
+/* Estilo para o texto laranja (UNYTY-P2P) */
+.laranja {
+    color: #f8b500; /* Cor laranja */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(45deg, #000000, #434343);
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #f8b500;
+    color: #000000;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #e09e00;
+}
+
+/* Info Sections */
+.info-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #f8b500;
+}
+
+.info-section p {
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+/* Cotação Box */
+.cotacao-box {
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.cotacao-box p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Alinhar o preço e a seta na mesma linha */
+#preco-btc-container {
+    display: inline-flex;
+    align-items: center; /* Alinha verticalmente a seta e o preço */
+}
+
+/* Estilo do preço */
+#preco-btc {
+    font-size: 24px;
+    font-weight: bold;
+    color: #f8b500;
+    display: inline-block; /* Garante que o preço e a seta fiquem na mesma linha */
+}
+
+/* Estilo da seta */
+#seta {
+    font-size: 24px;
+    color: #f8b500; /* Cor inicial da seta */
+    margin-left: 8px; /* Adiciona um pequeno espaço entre o preço e a seta */
+    display: inline-block; /* Garante que a seta fique na mesma linha do preço */
+}
+
+/* Formas de Negociação dentro da cotação box */
+/* Estilo do Box de Cotação */
+
+/* Formas de Negociação dentro da cotação box */
+.formas-negociacao-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* A distância de 2px entre a taxa de negociação e as formas de negociação */
+}
+
+.formas-negociacao-item {
+    font-size: 18px;
+    font-weight: bold;
+    color: #f8b500;
+    opacity: 0; /* Começa invisível */
+
+    margin-right: 2px; /* Adiciona uma distância de 2px entre os itens */
+    position: absolute;
+}
+
+.formas-negociacao-item.show {
+    opacity: 1;
+}
+
+
+/* Footer */
+footer {
+    background-color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+    color: #999999;
+}
+
+/* Ícones */
+.fa-chevron-down:before {
+    display: none;
+}
+
+
+/* Estilo da seta */
+/* Estilo da seta */
+.scroll-to-top {
+    position: fixed;
+    bottom: 40px; /* Distância maior da parte inferior */
+    right: 40px; /* Distância maior da parte direita */
+    background-color: rgba(248, 181, 0, 0.7); /* Cor de fundo laranja com 70% de transparência */
+    color: #000000; /* Cor da seta */
+    padding: 15px; /* Aumentando o padding para tornar a seta maior */
+    border-radius: 50%; /* Círculo completo */
+    font-size: 24px;
+    display: none; /* Inicialmente invisível */
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    width: 60px; /* Tamanho do círculo */
+    height: 60px; /* Tamanho do círculo */
+    text-align: center; /* Centraliza a seta dentro do círculo */
+    line-height: 30px; /* Centraliza verticalmente a seta no círculo */
+}
+
+/* Efeito de hover para a seta */
+.scroll-to-top:hover {
+    opacity: 1; /* Fica totalmente opaco quando o mouse passa sobre o botão */
+    background-color: rgba(248, 181, 0, 1); /* Cor de fundo sem transparência no hover */
+}
+
+/* Estilo do ícone de seta */
+.scroll-to-top i {
+    font-size: 20px; /* Ajusta o tamanho do ícone */
+    color: #000000; /* Cor da seta dentro do círculo */
+}
+
+
+@media (max-width: 768px) {
+    /* Ajuste o espaçamento entre os itens de navegação */
+    header nav ul {
+        gap: -10px; /* Reduzido o espaçamento entre os links */
+        
+        align-items: center; /* Centraliza os itens do menu */
+    }
+
+    /* Esconde o menu por padrão */
+    .nav-mobile {
+        display: none;
+        flex-direction: column; /* Exibe os itens um abaixo do outro */
+    }
+
+    /* Menu visível quando o botão de menu for clicado */
+    .nav-mobile.show {
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.9); /* Fundo temporário para o menu */
+        padding: 20px 0; /* Ajusta o padding para o menu */
+    }
+
+    /* Estilo do botão de menu (seta) */
+    .menu-toggle {
+        cursor: pointer;
+        text-align: center;
+        margin-top: 20px; /* Aumentado o espaço acima da seta */
+    }
+
+    .menu-toggle i {
+        font-size: 24px;
+        color: #fff;
+    }
+
+    /* Exibe o ícone de seta no mobile */
+    .fa-chevron-down:before {
+        display: block; /* Exibe a seta no mobile */
+    }
+
+    /* Centraliza título para mobile */
+    .logo h1 {
+        font-size: 36px; /* Tamanho ajustado para o título no mobile */
+        text-align: center;
+        margin-bottom: 10px; /* Ajuste o espaço abaixo do título */
+    }
+
+    /* Coloca o ícone da seta abaixo do título */
+    .logo {
+        display: flex;
+        flex-direction: column; /* Empilha os itens em coluna */
+        align-items: center;
+    }
+
+    /* Ajuste no espaçamento da navegação */
+    .nav-mobile li {
+        margin-bottom: -20px; /* Adiciona um espaço entre os itens do menu */
+    }
+
+    .scroll-to-top {
+        width: 50px; /* Reduz o tamanho do círculo */
+        height: 50px; /* Reduz o tamanho do círculo */
+        padding: 10px; /* Ajusta o padding */
+        font-size: 18px; /* Ajusta o tamanho da seta */
+        line-height: 25px; /* Ajusta a altura da linha para centralizar a seta */
+        background-color: rgba(248, 181, 0, 0.7); /* Cor de fundo laranja com transparência */
+        opacity: 0.7; /* Faz o botão um pouco transparente */
+    }
+
+    .scroll-to-top i {
+        font-size: 15px; /* Ajusta o tamanho do ícone da seta */
+        opacity: 1; /* Garantir que o ícone tenha opacidade total */
+    }
+}
+
+/* Efeito de hover para a seta */
+.scroll-to-top:hover {
+    opacity: 1; /* Fica totalmente opaco quando o mouse passa sobre o botão */
+}
+
+/* Estilo do ícone de seta */
+.scroll-to-top i {
+    font-size: 20px;
+    color: #000000;
+}
+
+
+    
+
